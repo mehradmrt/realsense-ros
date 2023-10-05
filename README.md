@@ -188,6 +188,7 @@
   Camera Name And Camera Namespace
 </h3>
 
+### Usage
 User can set the camera name and camera namespace, to distinguish between cameras and platforms, which helps identifying the right nodes and topics to work with.
 
 ### Example
@@ -247,9 +248,7 @@ User can set the camera name and camera namespace, to distinguish between camera
 /camera/camera/device_info
 ```
 
-
 <hr>
-
 
 <h3 id="parameters">
   Parameters
