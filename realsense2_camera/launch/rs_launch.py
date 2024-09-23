@@ -10,7 +10,6 @@ from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration, PythonExpression
 from launch.conditions import IfCondition
 
- 
 configurable_parameters = [{'name': 'camera_name',                  'default': 'camera', 'description': 'camera unique name'},
                            {'name': 'serial_no',                    'default': "''", 'description': 'choose device by serial number'},
                            {'name': 'usb_port_id',                  'default': "''", 'description': 'choose device by usb port id'},
@@ -38,7 +37,9 @@ configurable_parameters = [{'name': 'camera_name',                  'default': '
                            {'name': 'gyro_fps',                     'default': '0', 'description': "''"},                           
                            {'name': 'accel_fps',                    'default': '0', 'description': "''"},                           
                            {'name': 'enable_gyro',                  'default': 'false', 'description': "''"},                           
-                           {'name': 'enable_accel',                 'default': 'false', 'description': "''"},                           
+                           {'name': 'enable_accel',                 'default': 'false', 'description': "''"},
+                        #    {'name': 'enable_gyro',                  'default': 'true', 'description': "''"},                           
+                        #    {'name': 'enable_accel',                 'default': 'true', 'description': "''"},                            
                            {'name': 'enable_pose',                  'default': 'true', 'description': "''"},                           
                            {'name': 'pose_fps',                     'default': '200', 'description': "''"},
                         #    {'name': 'pointcloud.enable',            'default': 'false', 'description': ''},                            
@@ -53,8 +54,8 @@ configurable_parameters = [{'name': 'camera_name',                  'default': '
                            {'name': 'linear_accel_cov',             'default': '0.01', 'description': "''"},                           
                            {'name': 'initial_reset',                'default': 'false', 'description': "''"},                           
                            {'name': 'allow_no_texture_points',      'default': 'false', 'description': "''"},
-                        #    {'name': 'ordered_pc',                   'default': 'false', 'description': ''},                           
-                           {'name': 'ordered_pc',                   'default': 'true', 'description': ''},
+                        #    {'name': 'pointcloud.ordered_pc',        'default': 'false', 'description': ''},                           
+                           {'name': 'pointcloud.ordered_pc',        'default': 'true', 'description': ''},
                            {'name': 'calib_odom_file',              'default': "''", 'description': "''"},
                            {'name': 'topic_odom_in',                'default': "''", 'description': 'topic for T265 wheel odometry'},
                            {'name': 'tf_publish_rate',              'default': '0.0', 'description': 'Rate of publishing static_tf'},
